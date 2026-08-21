@@ -79,36 +79,90 @@ jobs:
           cp output/$(date +%Y-%m-%d)_report.html docs/index.html
           echo "✅ HTML 日报已生成"
 
-      # ── 提交结果到仓库（使用 GitHub API）────────
+      # ── 提交结果到仓库 ──────────────────────────
       - name: 提交结果
-        working-directory: .
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TODAY=$(date +%Y-%m-%d)
-          
-          # 检查 output 目录是否有文件
-          if [ ! -d "output" ] || [ -z "$(ls -A output/ 2>/dev/null)" ]; then
-            echo "⚠️ 没有输出文件，跳过提交"
-            exit 0
-          fi
-          
-          echo "📦 准备提交文件..."
-          
-          # 使用 git 提交到本地
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "data: ${TODAY} 每日采集更新 [skip ci]" || echo "没有变更"
-          
-          # 尝试 push（可能需要 PAT）
-          if git push origin HEAD:master 2>/dev/null; then
-            echo "✅ git push 成功"
-          else
-            echo "⚠️ git push 失败，尝试使用 PAT..."
-            git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}
-            git push origin HEAD:master || echo "⚠️ PAT push 也失败，使用 API 上传..."
-          fi
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            const today = new Date().toISOString().split('T')[0];
+            const outputDir = 'output';
+            const docsDir = 'docs';
+            
+            // 获取 output 目录的文件
+            if (!fs.existsSync(outputDir)) {
+              console.log('⚠️ output 目录不存在');
+              return;
+            }
+            
+            const files = fs.readdirSync(outputDir);
+            if (files.length === 0) {
+              console.log('⚠️ output 目录为空');
+              return;
+            }
+            
+            console.log(`📦 找到 ${files.length} 个文件`);
+            
+            // 提交每个文件
+            for (const file of files) {
+              const filePath = path.join(outputDir, file);
+              const content = fs.readFileSync(filePath, 'base64');
+              
+              // 检查文件是否已存在
+              let sha;
+              try {
+                const { data } = await github.rest.repos.getContent({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  path: `output/${file}`,
+                });
+                sha = data.sha;
+              } catch (e) {
+                // 文件不存在
+              }
+              
+              // 创建或更新文件
+              await github.rest.repos.createOrUpdateFileContents({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                path: `output/${file}`,
+                message: `data: ${today} - ${file}`,
+                content: content,
+                sha: sha,
+              });
+              
+              console.log(`✅ 已提交: output/${file}`);
+            }
+            
+            // 提交 docs/index.html
+            if (fs.existsSync(`${docsDir}/index.html`)) {
+              const content = fs.readFileSync(`${docsDir}/index.html`, 'base64');
+              let sha;
+              try {
+                const { data } = await github.rest.repos.getContent({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  path: 'docs/index.html',
+                });
+                sha = data.sha;
+              } catch (e) {}
+              
+              await github.rest.repos.createOrUpdateFileContents({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                path: 'docs/index.html',
+                message: `docs: ${today} HTML 日报`,
+                content: content,
+                sha: sha,
+              });
+              
+              console.log('✅ 已提交: docs/index.html');
+            }
+            
+            console.log('🎉 所有文件提交完成！');
 
       # ── 上传产物（可选，保留 7 天） ──────────────
       - name: 上传产物
