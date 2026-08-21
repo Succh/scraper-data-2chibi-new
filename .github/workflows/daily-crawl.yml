@@ -88,9 +88,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 设置 remote URL with token
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
-          
           # 检查是否有变更
           if git diff --quiet && git diff --staged --quiet; then
             echo "✅ 没有新变更需要提交"
@@ -111,7 +108,12 @@ jobs:
           
           [skip ci]"
           
-          git push origin HEAD:master
+          # 尝试 push，如果失败则使用 PAT
+          if ! git push origin HEAD:master 2>/dev/null; then
+            echo "⚠️ 默认 push 失败，尝试使用 PAT..."
+            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
+            git push origin HEAD:master
+          fi
           echo "✅ 结果已提交到仓库"
 
       # ── 上传产物（可选，保留 7 天） ──────────────
