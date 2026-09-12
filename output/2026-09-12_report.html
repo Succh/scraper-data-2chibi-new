@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>二次元趣闻日报 - 2026-09-12</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.container { max-width: 1400px; margin: 0 auto; }
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+}
+.header h1 { font-size: 2.2em; margin-bottom: 8px; text-shadow: 0 2px 4px rgba(0,0,0,.3); }
+.header p { opacity: .9; font-size: 1em; }
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 20px 0;
+}
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255,255,255,.2);
+    color: white;
+    cursor: pointer;
+    font-size: .9em;
+    transition: all .2s;
+}
+.filter-btn:hover, .filter-btn.active {
+    background: white;
+    color: #764ba2;
+    transform: scale(1.05);
+}
+.stats {
+    text-align: center;
+    color: rgba(255,255,255,.8);
+    margin: 10px 0 20px;
+    font-size: .9em;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
+    transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+}
+.card.hidden { display: none; }
+.card-img {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f0f0;
+    position: relative;
+}
+.score-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: .85em;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+.cat-badge {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    color: white;
+    font-size: .75em;
+    font-weight: 500;
+}
+.card-body { padding: 14px; }
+.card-title { font-size: 1em; line-height: 1.4; margin-bottom: 6px; }
+.card-title a { color: #2d3436; text-decoration: none; }
+.card-title a:hover { color: #764ba2; }
+.card-summary {
+    font-size: .85em;
+    color: #636e72;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-meta {
+    display: flex;
+    gap: 12px;
+    font-size: .75em;
+    color: #b2bec3;
+}
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: rgba(255,255,255,.6);
+    font-size: .85em;
+}
+@media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.6em; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🎌 二次元趣闻日报</h1>
+        <p>2026-09-12 · 共 20 条精选</p>
+    </div>
+    <div class="filters">
+        <button class="filter-btn active" data-cat="all">全部 (20)</button> <button class="filter-btn" data-cat="Vtuber">🤖 Vtuber (1)</button> <button class="filter-btn" data-cat="新番">✨ 新番 (3)</button> <button class="filter-btn" data-cat="漫展">✨ 漫展 (1)</button> <button class="filter-btn" data-cat="Cosplay">✨ Cosplay (1)</button> <button class="filter-btn" data-cat="其他">✨ 其他 (14)</button>
+    </div>
+    <div class="stats">
+        点击分类筛选 · 按评分排序 · 数据每日自动更新
+    </div>
+    <div class="grid">
+        
+            <div class="card" data-cat="Vtuber" data-score="75">
+                <div class="card-img" style="background-image:url(http://i0.hdslb.com/bfs/archive/b6d9c9bdae1ea822fd3a3866631c718686d18d6a.jpg)">
+                    <span class="score-badge" style="background:#00b894">75</span>
+                    <span class="cat-badge" style="background:#98D8C8">🤖 Vtuber</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1cNYS6fELH" target="_blank">AI自制类3D虚拟偶像街舞舞蹈MV，Breaking-B-girl系列</a>
+                    </h3>
+                    <p class="card-summary">AI自制类3D虚拟偶像街舞舞蹈MV，Breaking-B-girl系列</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="新番" data-score="70">
+                <div class="card-img" style="background-image:url(http://i0.hdslb.com/bfs/archive/474791f3dc6d9227cca688b8ec2391eca772ca96.jpg)">
+                    <span class="score-badge" style="background:#00b894">70</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 新番</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1CPYS6bEPF" target="_blank">儿童动画：汪汪队成员腿变长了，珠珠紧跟其后</a>
+                    </h3>
+                    <p class="card-summary">儿童动画：汪汪队成员腿变长了，珠珠紧跟其后</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="新番" data-score="70">
+                <div class="card-img" style="background-image:url(http://i2.hdslb.com/bfs/archive/f37be52f632f053a723318f15252db4b17e5b7f5.jpg)">
+                    <span class="score-badge" style="background:#00b894">70</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 新番</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1CPYS6bEAp" target="_blank">儿童动画：汪汪队立大功动画来了，阿奇登场</a>
+                    </h3>
+                    <p class="card-summary">儿童动画：汪汪队立大功动画来了，阿奇登场</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="新番" data-score="70">
+                <div class="card-img" style="background-image:url(http://i0.hdslb.com/bfs/archive/e2afcfb3f58c61e497e2c923095b2f9b1722e467.jpg)">
+                    <span class="score-badge" style="background:#00b894">70</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 新番</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1APYS68EEu" target="_blank">儿童动画：围绕儿童动画天天的脖子长大了展开冒险，奇妙冒险正式开启</a>
+                    </h3>
+                    <p class="card-summary">儿童动画：围绕儿童动画天天的脖子长大了展开冒险，奇妙冒险正式开启</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="漫展" data-score="70">
+                <div class="card-img" style="background-image:url(http://i0.hdslb.com/bfs/archive/22beb629f11856e5a10df7c479e0c78a07781d23.jpg)">
+                    <span class="score-badge" style="background:#00b894">70</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 漫展</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1kPYS6bEp4" target="_blank">这是什么玩意？？？《恶魔连结》同人视频</a>
+                    </h3>
+                    <p class="card-summary">这是什么玩意？？？《恶魔连结》同人视频</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 1</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="Cosplay" data-score="65">
+                <div class="card-img" style="background-image:url(http://i0.hdslb.com/bfs/archive/2e76b3186d155c99627fa89a136207329d9a72da.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">65</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ Cosplay</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1CPYS6bEjf" target="_blank">日常甜系穿搭&动漫COS舞蹈持续更新～这种温柔卡点舞蹈戳中你了吗？想看什么风格、什么角色评论区留言点菜，关注我持续上新不迷路！</a>
+                    </h3>
+                    <p class="card-summary">日常甜系穿搭&动漫COS舞蹈持续更新～这种温柔卡点舞蹈戳中你了吗？想看什么风格、什么角色评论区...</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="60">
+                <div class="card-img" style="background-image:url(http://i1.hdslb.com/bfs/archive/c46fc1384dc89817541a093ade17e9b79ea4fec6.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">60</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1kcYS6hERT" target="_blank">【中字】提欧奥特曼第11集：去合宿吧！</a>
+                    </h3>
+                    <p class="card-summary">【中字】提欧奥特曼第11集：去合宿吧！</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 1</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="55">
+                <div class="card-img" style="background-image:url(http://i1.hdslb.com/bfs/archive/5212a9ac472da40ab52f987ed6b0343919f8bcdf.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">55</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1kPYS6bESa" target="_blank">帮黑塔检查，是红薯“是洛文不是乐文”老师的无偿！</a>
+                    </h3>
+                    <p class="card-summary">帮黑塔检查，是红薯“是洛文不是乐文”老师的无偿！</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="55">
+                <div class="card-img" style="background-image:url(http://i0.hdslb.com/bfs/archive/1bc5e188ce661a3d22887b10ac5fac966dc345af.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">55</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1rPYS6bE1D" target="_blank">赵无极：脸接昊天锤第一人</a>
+                    </h3>
+                    <p class="card-summary">赵无极：脸接昊天锤第一人</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="55">
+                <div class="card-img" style="background-image:url(http://i1.hdslb.com/bfs/archive/6d270e8d0a850f5247779bb3cd66c23eba14b0bb.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">55</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1wPYS68EJG" target="_blank">画了张鸣人，拿尺子比着画的，感觉还行✨就是头发有点难搞，将就看啦~</a>
+                    </h3>
+                    <p class="card-summary">画了张鸣人，拿尺子比着画的，感觉还行✨就是头发有点难搞，将就看啦~</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="55">
+                <div class="card-img" style="background-image:url(http://i1.hdslb.com/bfs/archive/e3177ba38c270505c5302b003ab5dee82f97384e.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">55</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1DrY26iEvg" target="_blank">アイディール・アイドール传说榜彩蛋</a>
+                    </h3>
+                    <p class="card-summary">アイディール・アイドール传说榜彩蛋</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="55">
+                <div class="card-img" style="background-image:url(http://i1.hdslb.com/bfs/archive/bad6522e1618573cb616860775ab43a842d71315.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">55</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1nNYS6fE1f" target="_blank">《拉黑遇真爱》第二集，为了跟我结婚千亿女神也是拼了</a>
+                    </h3>
+                    <p class="card-summary">《拉黑遇真爱》第二集，为了跟我结婚千亿女神也是拼了</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="55">
+                <div class="card-img" style="background-image:url(http://i1.hdslb.com/bfs/archive/3ccf1f7353b328204a4a286891c8a6bb0b939a63.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">55</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1rPYS6bEib" target="_blank">她真的是所有人心中的白月光！</a>
+                    </h3>
+                    <p class="card-summary">她真的是所有人心中的白月光！</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="55">
+                <div class="card-img" style="background-image:url(http://i2.hdslb.com/bfs/archive/f276897ee98159d87ec8c93c14100798382cb667.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">55</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1wPYS68EEz" target="_blank">虽然烂尾了，但是我还爱看</a>
+                    </h3>
+                    <p class="card-summary">虽然烂尾了，但是我还爱看</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="55">
+                <div class="card-img" style="background-image:url(http://i0.hdslb.com/bfs/archive/28b54267d48bc50751df407f4c338eca5d1c7070.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">55</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1kPYS6bEy2" target="_blank">【AI翻唱/描改】黛西的キューピット</a>
+                    </h3>
+                    <p class="card-summary">【AI翻唱/描改】黛西的キューピット</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="50">
+                <div class="card-img" style="background-image:url(http://i2.hdslb.com/bfs/archive/30080486165944c4346003b8a10062b8f2731f12.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">50</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1PcYS6aEdc" target="_blank">凌空漂浮的神力</a>
+                    </h3>
+                    <p class="card-summary">凌空漂浮的神力</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="50">
+                <div class="card-img" style="background-image:url(http://i1.hdslb.com/bfs/archive/43d8a01de435c03460025cb4b6539bf3b521962f.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">50</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1HPYS68EC9" target="_blank">雅雅姐还是太自信了</a>
+                    </h3>
+                    <p class="card-summary">雅雅姐还是太自信了</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="50">
+                <div class="card-img" style="background-image:url(http://i0.hdslb.com/bfs/archive/e02c48d83b6b35191e66c80b9c23453a2975d57b.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">50</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1HPYS68EyF" target="_blank">第一支视频求三连！</a>
+                    </h3>
+                    <p class="card-summary">第一支视频求三连！</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="50">
+                <div class="card-img" style="background-image:url(http://i2.hdslb.com/bfs/archive/361d48d74eed057b2a9150b6b3e1a388fe44596d.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">50</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1rPYS6bEaX" target="_blank">兔子</a>
+                    </h3>
+                    <p class="card-summary">兔子</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="其他" data-score="50">
+                <div class="card-img" style="background-image:url(http://i1.hdslb.com/bfs/archive/a4cda30ea4bb293a305e917a1dd68f9ce9a09a8c.jpg)">
+                    <span class="score-badge" style="background:#fdcb6e">50</span>
+                    <span class="cat-badge" style="background:#74B9FF">✨ 其他</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="https://www.bilibili.com/video/BV1cNYS6fEES" target="_blank">自我介绍</a>
+                    </h3>
+                    <p class="card-summary">自我介绍</p>
+                    <div class="card-meta">
+                        <span>👤 未知</span>
+                        <span>▶️ 0</span>
+                        <span>💬 0</span>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+    <div class="footer">
+        Powered by 阿堰 · 数据来源 B站 · AI 富化 Gemini
+    </div>
+</div>
+<script>
+document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const cat = btn.dataset.cat;
+        document.querySelectorAll(".card").forEach(card => {
+            card.classList.toggle("hidden", cat !== "all" && card.dataset.cat !== cat);
+        });
+    });
+});
+</script>
+</body>
+</html>
