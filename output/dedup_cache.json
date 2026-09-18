@@ -42,6 +42,7 @@
     "BV14h8S6cEAC",
     "BV14itE6BE6h",
     "BV14itE6BEaU",
+    "BV15Eey6BEhA",
     "BV15P8e6YEpE",
     "BV15V8K6XE1X",
     "BV15ctQ6rE5D",
@@ -75,6 +76,7 @@
     "BV18x8K6yEBm",
     "BV18yts64E21",
     "BV19BY56EEdR",
+    "BV19Eey6qEwi",
     "BV19VYe6TEwn",
     "BV19WhA6GE32",
     "BV19WhA6GELS",
@@ -239,10 +241,14 @@
     "BV1QdhM6REae",
     "BV1Qs8K6LE3N",
     "BV1R1YE6FEtx",
+    "BV1REey6qEQU",
+    "BV1REey6qEZS",
+    "BV1REey6qEeQ",
     "BV1RKYa6PEKK",
     "BV1RPYa6vE29",
     "BV1RRtx6BEbq",
     "BV1S4b36sELb",
+    "BV1S4ey6wExa",
     "BV1SKbH6SE2v",
     "BV1SXt96CE9D",
     "BV1Sb4k6qEt7",
@@ -344,6 +350,11 @@
     "BV1cmtT6aEyi",
     "BV1ct886hEwy",
     "BV1d3bu6oEtS",
+    "BV1dEey6qEKQ",
+    "BV1dEey6qENZ",
+    "BV1dEey6qEPL",
+    "BV1dEey6qETh",
+    "BV1dEey6qEjL",
     "BV1dTtc6eEUy",
     "BV1dTtc6eEn4",
     "BV1dTtc6eEok",
@@ -566,8 +577,8 @@
     "BV1zu8K6xE7G"
   ],
   "stats": {
-    "total_in_cache": 564,
-    "added_this_run": 20
+    "total_in_cache": 575,
+    "added_this_run": 11
   },
-  "updated_at": "2026-09-17T02:22:07.969462"
+  "updated_at": "2026-09-18T02:07:55.139415"
 }
